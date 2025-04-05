@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://172.17.0.1:5432/test
+    username: postgres
+    password: suparman
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+  application:
+    name: vehicle-service
+  data:
+    redis:
+      port: 6379
+      host: 172.17.0.1
+  cache:
+    redis:
+      time-to-live: 1m
+  kafka:
+    bootstrap-servers: 172.17.0.1:9092
+    consumer:
+      group-id: vehicle-service
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+server:
+  port: 18080

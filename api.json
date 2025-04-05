@@ -1,0 +1,334 @@
+{
+	"info": {
+		"_postman_id": "92ba16cd-87f0-4429-a557-6db901369680",
+		"name": "According Inovation Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5677441"
+	},
+	"item": [
+		{
+			"name": "Master",
+			"item": [
+				{
+					"name": "Vehicle",
+					"item": [
+						{
+							"name": "Get All Vehicle",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18080/vehicle",
+									"host": [
+										"localhost"
+									],
+									"port": "18080",
+									"path": [
+										"vehicle"
+									],
+									"query": [
+										{
+											"key": "statusId",
+											"value": "2",
+											"description": "1=IDLE,2=ON GOING",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Vehicle",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"plateNumber\": \"D 0987 BH\",\n    \"model\": \"KARIMUN\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:18080/vehicle",
+									"host": [
+										"localhost"
+									],
+									"port": "18080",
+									"path": [
+										"vehicle"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "ON_DUTY",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find Vehicle by ID",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18080/vehicle/60a29c18-e339-418d-ab4b-aaf88d3b6cac",
+									"host": [
+										"localhost"
+									],
+									"port": "18080",
+									"path": [
+										"vehicle",
+										"60a29c18-e339-418d-ab4b-aaf88d3b6cac"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "ON_DUTY",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Status",
+					"item": [
+						{
+							"name": "Get All Status",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18080/status",
+									"host": [
+										"localhost"
+									],
+									"port": "18080",
+									"path": [
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Status Copy",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:18080/status/1",
+									"host": [
+										"localhost"
+									],
+									"port": "18080",
+									"path": [
+										"status",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "Add Trip",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleId\": \"bb20ab70-9d73-4484-9d8b-9331fd551224\",\n    \"startLocation\": \"SUMATRA\",\n    \"endLocation\": \"PAPUA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:18081/trip",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Trip by ID",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/trip/fcf222d0-ebff-4c39-8caa-4ab16e585f45",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"trip",
+								"fcf222d0-ebff-4c39-8caa-4ab16e585f45"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Trip",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18081/trip",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"trip"
+							],
+							"query": [
+								{
+									"key": "statusId",
+									"value": "3",
+									"description": "2 = ON GONG, 3 = Done",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Count Trip by Status and Monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18081/dashboard/status-summary-monthly?periode=2025-04",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"dashboard",
+								"status-summary-monthly"
+							],
+							"query": [
+								{
+									"key": "periode",
+									"value": "2025-04"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Trip Monthly",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18081/dashboard/trips-monthly?periode=2025-04",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"dashboard",
+								"trips-monthly"
+							],
+							"query": [
+								{
+									"key": "periode",
+									"value": "2025-04"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Trend Trip by Monthly Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:18081/dashboard/trend-monthly?periode=2025-04&statusId=3",
+							"host": [
+								"localhost"
+							],
+							"port": "18081",
+							"path": [
+								"dashboard",
+								"trend-monthly"
+							],
+							"query": [
+								{
+									"key": "periode",
+									"value": "2025-04"
+								},
+								{
+									"key": "statusId",
+									"value": "3",
+									"description": "2=On Going, 3=Done"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
