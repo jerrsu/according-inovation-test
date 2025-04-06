@@ -1,6 +1,6 @@
-package com.test.vehicle.repository;
+package com.test.master.repository;
 
-import com.test.vehicle.model.TripStatus;
+import com.test.master.model.TripStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

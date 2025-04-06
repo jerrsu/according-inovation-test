@@ -18,12 +18,12 @@ public class VehicleClient {
     private RestTemplate restTemplate;
 
     public Vehicle getVehicleById(UUID vehicleId) {
-        String VEHICLE_SERVICE_URL = "http://172.17.0.1:18080/vehicle/";
+        String VEHICLE_SERVICE_URL = "http://master-service:18080/vehicle/";
         return restTemplate.getForObject(VEHICLE_SERVICE_URL + vehicleId, Vehicle.class);
     }
 
     public TripStatus getStatusById(Integer statusId) {
-        String STATUS_SERVICE_URL = "http://172.17.0.1:18080/status/";
+        String STATUS_SERVICE_URL = "http://master-service:18080/status/";
         return restTemplate.getForObject(STATUS_SERVICE_URL + statusId, TripStatus.class);
     }
 

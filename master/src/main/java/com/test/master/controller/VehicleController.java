@@ -1,7 +1,7 @@
-package com.test.vehicle.controller;
+package com.test.master.controller;
 
-import com.test.vehicle.model.Vehicle;
-import com.test.vehicle.service.VehicleService;
+import com.test.master.model.Vehicle;
+import com.test.master.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;

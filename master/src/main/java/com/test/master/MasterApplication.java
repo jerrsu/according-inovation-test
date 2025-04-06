@@ -1,16 +1,13 @@
-package com.test.vehicle;
+package com.test.master;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
-
 
 @SpringBootApplication
-@EnableCaching
-public class VehileApplication {
+public class MasterApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(VehileApplication.class, args);
+        SpringApplication.run(MasterApplication.class, args);
     }
 
 }

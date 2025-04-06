@@ -1,13 +1,12 @@
 version: '3.8'
-
 services:
   service:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: trip-service
+    container_name: master-service
     ports:
-      - "18081:18081"
+      - "18080:18080"
     networks:
       - local-network
 

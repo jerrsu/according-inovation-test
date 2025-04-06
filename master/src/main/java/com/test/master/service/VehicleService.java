@@ -1,7 +1,7 @@
-package com.test.vehicle.service;
+package com.test.master.service;
 
-import com.test.vehicle.model.Vehicle;
-import com.test.vehicle.repository.VehicleRepository;
+import com.test.master.model.Vehicle;
+import com.test.master.repository.VehicleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;

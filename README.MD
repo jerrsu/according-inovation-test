@@ -1,6 +1,6 @@
 # Assessment Test
 
-## Position: Backend Developer
+## Job Title: Backend Developer
 
 ### Software requirements
 
@@ -12,15 +12,26 @@
 - Docker
 
 ### Running the Application
+
 - Make sure all software requirements are installed
-- Adjust the configuration of the IP address and password from the application.yml file in the trip and master services with the configuration you have installed.
-- Build first in the directory of each service
+- Kafka and redis must be running, if not then enable them.
+- Adjust the IP address and password configuration from the application.yml file in the trip and master services with the configuration you have installed.
+
+- Build first in each service directory
+
 ```bash
+# this is for service trip
+cd /your-directory/trip
 mvn clean package -DskipTest
-```
-- After that, Dockerize each service with the command
-```bash
 docker compose up --build -d
 ```
-- To import vehicle data and trip status, you can run a query with the data_.sql file
-- Also import the api collection with the name api.json into your postman
+
+```bash
+# this is for service master
+cd /your-directory/trip
+mvn clean package -DskipTest
+docker compose up --build -d
+```
+
+- To import vehicle data and trip status, you can run a query with the data\_.sql file
+- Also import the api collection with the name api.json to your postman

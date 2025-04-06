@@ -1,4 +1,4 @@
-package com.test.vehicle.model;
+package com.test.master.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

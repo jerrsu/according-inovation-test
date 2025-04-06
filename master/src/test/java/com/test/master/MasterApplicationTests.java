@@ -1,10 +1,10 @@
-package com.test.vehicle;
+package com.test.master;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class VehileApplicationTests {
+class MasterApplicationTests {
 
     @Test
     void contextLoads() {

@@ -1,7 +1,7 @@
-package com.test.vehicle.controller;
+package com.test.master.controller;
 
-import com.test.vehicle.model.TripStatus;
-import com.test.vehicle.repository.TripStatusRepository;
+import com.test.master.model.TripStatus;
+import com.test.master.repository.TripStatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

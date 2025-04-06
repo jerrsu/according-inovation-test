@@ -1,6 +1,6 @@
-package com.test.vehicle.repository;
+package com.test.master.repository;
 
-import com.test.vehicle.model.Vehicle;
+import com.test.master.model.Vehicle;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,6 @@
-package com.test.vehicle.service;
+package com.test.master.service;
 
-import com.test.vehicle.model.Vehicle;
+import com.test.master.model.Vehicle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
