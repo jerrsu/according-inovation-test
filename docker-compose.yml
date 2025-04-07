@@ -1,0 +1,26 @@
+version: "3.8"
+
+services:
+  master:
+    build:
+      context: ./master
+      dockerfile: Dockerfile
+    container_name: master-service
+    ports:
+      - "18080:18080"
+    networks:
+      - local-network
+
+  transaction:
+    build:
+      context: ./trip
+      dockerfile: Dockerfile
+    container_name: trip-service
+    ports:
+      - "18081:18081"
+    networks:
+      - local-network
+
+networks:
+  local-network:
+    external: true

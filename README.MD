@@ -20,16 +20,20 @@
 - Build first in each service directory
 
 ```bash
-# this is for service trip
+# this is for build jar service trip
 cd /your-directory/trip
 mvn clean package -DskipTest
-docker compose up --build -d
 ```
 
 ```bash
-# this is for service master
+# this is for build jar service master
 cd /your-directory/trip
 mvn clean package -DskipTest
+```
+
+```bash
+# this is for build images-container
+cd /your-directory/according-inovation-test
 docker compose up --build -d
 ```
 
