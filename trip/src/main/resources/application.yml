@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://postgres-local:5432/test
+    url: jdbc:postgresql://172.17.0.1:5432/test
     username: postgres
     password: suparman
     driver-class-name: org.postgresql.Driver
@@ -9,7 +9,7 @@ spring:
     hibernate:
       ddl-auto: update
   application:
-    name: vehicle-service
+    name: trip-service
   data:
     redis:
       port: 6379
